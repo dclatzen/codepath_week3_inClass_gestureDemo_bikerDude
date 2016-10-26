@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="codepath_week3_inClass_demo_gesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="biker" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-Dn-0rh">
+                                <frame key="frameInset" minX="87" minY="123" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FHH-bc-uHN" appends="YES" id="huN-Yp-AsQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="DYE-iI-42F" appends="YES" id="Da0-TG-mYL"/>
+                                    <outletCollection property="gestureRecognizers" destination="5xA-j9-MOV" appends="YES" id="BGj-VM-top"/>
+                                    <outletCollection property="gestureRecognizers" destination="sAf-OA-Hrg" appends="YES" id="Xtr-gU-Xam"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XuA-di-yvg" appends="YES" id="o70-Ob-YnG"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="bikerImageView" destination="1BA-Dn-0rh" id="Wqx-1f-Lpg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="5" id="FHH-bc-uHN">
+                    <connections>
+                        <action selector="didTapBiker:" destination="BYZ-38-t0r" id="f5F-9h-sXY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DYE-iI-42F" userLabel="Pan Biker">
+                    <connections>
+                        <action selector="didPanBiker:" destination="BYZ-38-t0r" id="PeS-b1-iyJ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="XuA-di-yvg" userLabel="Pan View">
+                    <connections>
+                        <action selector="didPanView:" destination="BYZ-38-t0r" id="T58-Ah-sag"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="5xA-j9-MOV" userLabel="Pinch Biker">
+                    <connections>
+                        <action selector="didPinchBiker:" destination="BYZ-38-t0r" id="e5U-0W-MMq"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="sAf-OA-Hrg">
+                    <connections>
+                        <action selector="didRotate:" destination="BYZ-38-t0r" id="9kU-E7-leQ"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="biker" width="600" height="600"/>
+    </resources>
+</document>
